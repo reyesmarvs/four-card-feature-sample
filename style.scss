@@ -53,7 +53,6 @@ body {
   flex-direction: column;
   place-items: center;
   margin: 2em;
-  gap: 30px;
 
   .title {
     text-align: center;
@@ -64,7 +63,7 @@ body {
 
     h1 {
       font-weight: 400;
-      font-size: clamp(19px, 5vw, 38px);
+      font-size: clamp(19px, 6vw, 38px);
       line-height: 1.4;
       span {
         display: block;
@@ -120,7 +119,6 @@ body {
         border-color: hsl(212.13deg 63.27% 51.96%);
         grid-column-start: 3;
         grid-row-start: 2;
-        grid-row-end: 3;
       }
 
       .description {
@@ -129,7 +127,7 @@ body {
         gap: 15px;
 
         h2 {
-          font-size: 1.5rem;
+          font-size: clamp(1.2rem, 3vw, 1.5rem);
           font-weight: 600;
         }
 
@@ -140,18 +138,21 @@ body {
         }
       }
 
-      .icon {
+      picture {
         width: 100%;
         display: flex;
         justify-content: flex-end;
       }
     }
   }
-
   @media screen and (max-width: 720px) {
-    .cards {
-      display: flex;
-      flex-direction: column;
+    & {
+      gap: 30px;
+
+      .cards {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

@@ -52,7 +52,6 @@ body {
   flex-direction: column;
   place-items: center;
   margin: 2em;
-  gap: 30px;
 }
 .container .title {
   text-align: center;
@@ -63,7 +62,7 @@ body {
 }
 .container .title h1 {
   font-weight: 400;
-  font-size: clamp(19px, 5vw, 38px);
+  font-size: clamp(19px, 6vw, 38px);
   line-height: 1.4;
 }
 .container .title h1 span {
@@ -115,7 +114,6 @@ body {
   border-color: hsl(212.13, 63.27%, 51.96%);
   grid-column-start: 3;
   grid-row-start: 2;
-  grid-row-end: 3;
 }
 .container .cards .card .description {
   display: flex;
@@ -123,7 +121,7 @@ body {
   gap: 15px;
 }
 .container .cards .card .description h2 {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 600;
 }
 .container .cards .card .description p {
@@ -131,12 +129,15 @@ body {
   line-height: 1.5;
   color: hsl(233, 8%, 62%);
 }
-.container .cards .card .icon {
+.container .cards .card picture {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 @media screen and (max-width: 720px) {
+  .container {
+    gap: 30px;
+  }
   .container .cards {
     display: flex;
     flex-direction: column;
